@@ -31,10 +31,10 @@ public class MowerTest {
 		String actualPosition = mower.move(new Coordinate(1, 1));
 		
 		//Expected
-		Position expectedPostion = new Position(x, 
-				y, mower.getPosition().getDirection());
+		String expectedPostion = new Position(x, 
+				y, mower.getPosition().getDirection()).toString();
 
-		assertEquals(expectedPostion.toString(), actualPosition);
+		assertEquals(expectedPostion, actualPosition);
 	}
 	
 	@Test
