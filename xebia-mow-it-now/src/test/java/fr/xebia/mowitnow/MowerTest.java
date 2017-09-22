@@ -15,7 +15,7 @@ public class MowerTest {
 	private Mower mower;
 
 	@Before
-	public void inti() {
+	public void init() {
 		mower = new Mower();
 	}
 	
@@ -28,7 +28,7 @@ public class MowerTest {
 		//Actual
 		mower.setPosition(new Position(x, y, Direction.NORD));
 		mower.setSequence(Code.AVANCE);
-		String actualPosition =mower.move(new Coordinate(1, 1));
+		String actualPosition = mower.move(new Coordinate(1, 1));
 		
 		//Expected
 		Position expectedPostion = new Position(x, 
@@ -46,7 +46,7 @@ public class MowerTest {
 		//Actual
 		mower.setPosition(new Position(x, y, Direction.SUD));
 		mower.setSequence(Code.AVANCE);
-		String actualPosition =mower.move(new Coordinate(1, 1));
+		String actualPosition = mower.move(new Coordinate(1, 1));
 		
 		//Expected
 		Position expectedPostion = new Position(x, 
@@ -64,7 +64,7 @@ public class MowerTest {
 		//Actual
 		mower.setPosition(new Position(x, y, Direction.EST));
 		mower.setSequence(Code.AVANCE);
-		String actualPosition =mower.move(new Coordinate(1, 1));
+		String actualPosition = mower.move(new Coordinate(1, 1));
 		
 		//Expected
 		Position expectedPostion = new Position(x, 
@@ -82,7 +82,7 @@ public class MowerTest {
 		//Actual
 		mower.setPosition(new Position(x, y, Direction.OUEST));
 		mower.setSequence(Code.AVANCE);
-		String actualPosition =mower.move(new Coordinate(1, 1));
+		String actualPosition = mower.move(new Coordinate(1, 1));
 		
 		//Expected
 		Position expectedPostion = new Position(x, 
@@ -100,7 +100,7 @@ public class MowerTest {
 		//Actual
 		mower.setPosition(new Position(x, y, Direction.NORD));
 		mower.setSequence(Code.AVANCE);
-		String actualPosition =mower.move(new Coordinate(10, 10));
+		String actualPosition = mower.move(new Coordinate(10, 10));
 		
 		//Expected
 		Position expectedPostion = new Position(x, 

@@ -27,8 +27,7 @@ public class GrassTest {
 	public void shouldReturnIOException() throws IOException {
 		List<String> fileLines = GrassFactory
 				.getFileLines("C:\\java\\KSLProject\\xebia-mow-it-now\\src\\test\\resources\\notExist.txt");
-		assertNotNull(fileLines);
-		assertNotEquals(0, fileLines.size());
+		assertNull(fileLines);
 	}
 
 	@Test

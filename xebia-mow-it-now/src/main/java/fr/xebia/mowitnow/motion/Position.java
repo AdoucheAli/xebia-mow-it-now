@@ -49,24 +49,15 @@ public class Position {
 		if( rotation == null || this.getDirection() == null ) {
 			throw new NullPointerException("La rotation, la position et la direction ne peuvent être null");
 		}
-		
-		Direction newDirection = null;
-		int newIndice = 0;
-		int currentIndice = direction.ordinal();
-		
+
 		switch (rotation.getSense()) {
 		case Code.DROITE:
-			newIndice = (currentIndice + 1)%4;
-			newDirection = Direction.values()[newIndice];
+			direction = direction.turnRight();
 			break;
 		default:
-			newIndice = direction.equals(Direction.NORD) ?
-					Direction.OUEST.ordinal() : (currentIndice - 1)%4;
-			newDirection = Direction.values()[newIndice];
+			direction = direction.turnLeft();
 			break;
 		}
-
-		direction = newDirection;
 	}
 	
 	@Override
